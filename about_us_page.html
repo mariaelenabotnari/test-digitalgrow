@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -29,7 +31,7 @@
     <div class="about-digitalgrow">
         <!-- LEFT SIDE: description + statistics -->
         <div class="about-digitalgrow-and-stats">
-            <div class="text-content">
+            <div class="text-content" data-aos="fade-right">
                 <h4>About DigitalGrow</h4>
                 <h2>Empowering Local Businesses Through Digital Solutions</h2>
                 <p>
@@ -38,7 +40,7 @@
             </div>
 
             <!-- STATISTICS -->
-            <div class="stats">
+            <div class="stats" data-aos="zoom-in" data-aos-delay="100">
                 <div class="stat">
                     <h3>1K+</h3>
                     <p>Satisfied Clients</p>
@@ -55,7 +57,7 @@
         </div>
 
         <!-- RIGHT SIDE: image -->
-        <div class="image-content">
+        <div class="image-content" data-aos="fade-left">
             <img src="image1.jpg" alt="DigitalGrow image">
         </div>
     </div>
@@ -65,7 +67,7 @@
 
     <div class="first-two-values">
     
-        <div class="collaboration-value">
+        <div class="collaboration-value" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-circle"><i class="fa fa-child"></i></div>
             <div class="value-box">
                 <h2>Collaboration</h2>
@@ -73,7 +75,7 @@
             </div>
         </div>
 
-        <div class="transparency-value">
+        <div class="transparency-value" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-circle"><i class="fa fa-comment"></i></div>
             <div class="value-box">
                 <h2>Transparency</h2>
@@ -81,7 +83,7 @@
             </div>
         </div>
 
-        <div class="trust-value">
+        <div class="trust-value" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-circle"><i class="fa fa-thumbs-up"></i></div>
             <div class="value-box">
                 <h2>Trust</h2>
@@ -109,5 +111,53 @@
     </div>
 </footer>
 
+<div class="contact-form-overlay" id="contactForm">
+    <div class="contact-form">
+        <span class="close-btn" onclick="closeForm()">&times;</span>
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="question">Your Question:</label>
+                <textarea id="question" name="question" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </div>
+</div>
+
 </body>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
+<script>
+    const contactForm = document.getElementById('contactForm');
+    const contactUsButton = document.querySelector('.header button');
+
+    contactUsButton.addEventListener('click', () => {
+        contactForm.style.display = 'flex';
+    });
+
+    function closeForm() {
+        contactForm.style.display = 'none';
+    }
+</script>
+
 </html>
