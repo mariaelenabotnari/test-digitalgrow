@@ -1,0 +1,371 @@
+/* MENU */
+
+.menu {
+    display: flex;
+    gap: 25px;
+    margin: 0 auto; 
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 0.87rem;
+    color: #333;
+    padding-left: 30px; 
+
+}
+
+.menu div {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.menu div:hover {
+    color: #0056b3;
+}
+
+.menu div::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #0056b3;
+    transition: width 0.3s ease;
+}
+
+.menu div:hover::after {
+    width: 100%;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    height: 100px;
+    background-color: #f8f9fa;
+}
+
+.header button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header button:hover {
+    background-color: #003e88;
+    transform: scale(1.05);
+}
+
+.header > div {
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.logo img {
+    height: 120px; 
+    width: auto;  
+    display: block; 
+}
+
+/* BANNER */
+
+.banner {
+    position: relative; 
+    background-image: url('banner_image.jpg');
+    height: 340px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.banner {
+    position: relative; 
+    background-image: url('banner_image.jpg');
+    height: 340px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 20px; 
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(38, 108, 188, 0.6); 
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.banner-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 600px) {
+    .banner {
+        height: 200px; 
+    }
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+    .banner-content p {
+        font-size: 1rem;
+    }
+}
+
+/* DigitalGrow Description*/
+
+.about-digitalgrow {
+    display: flex;
+    flex-direction: row; 
+    gap: 30px;
+    padding: 40px 30px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.about-digitalgrow-and-stats {
+    flex: 1 1 400px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-digitalgrow .text-content {
+    width: 100%;
+}
+
+.stats {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-top: -30px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.stat h3 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    margin-bottom: 5px;
+}
+
+.stat p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.about-digitalgrow > div {
+    flex: 1 1 300px; 
+    max-width: 600px;
+}
+
+.about-digitalgrow .image-content {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.about-digitalgrow img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-digitalgrow h4 {
+    color: #0056b3;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.about-digitalgrow h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.about-digitalgrow p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    text-align: left;
+    word-wrap: break-word;
+    max-width: 90%; 
+}
+
+/* The company values section */
+
+.first-two-values {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 30px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    flex-wrap: wrap;
+}
+
+.collaboration-value, .transparency-value, .trust-value {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.value-box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.value-box h2 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #222;
+}
+
+.value-box p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+    word-wrap: break-word;
+}
+
+.values h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 60px;
+    background-color: #0056b3;
+    color: white;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+.footer-section {
+    flex: 1 1 250px;
+}
+
+.footer h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.footer i {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        align-items: center;
+    }
+}
